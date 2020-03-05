@@ -4,8 +4,9 @@ class CreateMovies < ActiveRecord::Migration[6.0]
 
     t.string :title
     t.string :image
-    t.string :release_year
     t.string :genre
+    t.integer :release_year
+
     t.timestamps
     end
   end
