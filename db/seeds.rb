@@ -27,7 +27,7 @@ m1 = Movie.create(title: "Titanic", image: "https://upload.wikimedia.org/wikiped
 
 m2 = Movie.create(title: "Black Panther", image: "//upload.wikimedia.org/wikipedia/en/0/0c/Black_Panther_film_poster.jpg", release_year: "2018", genre: "Science fiction ,Action,Adventure")
 
-m3 = Movie.create(title: "The Pirogue", image: "https://m.media-amazon.com/images/M/MV5BZWY3MWNiMDItN2ZhMS00Y2RhLWIxY2EtYWMzZjliZDYwNzY4XkEyXkFqcGdeQXVyODYxMTIwOTY@._V1_.jpg", release_year: "2012", genre: "Drama")
+m3 = Movie.create(title: "The Pirogue",image:"//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Affiche_207_La_pirogue_Fr.jpg/220px-Affiche_207_La_pirogue_Fr.jpg", release_year: "2012", genre: "Drama")
 
 m4 = Movie.create(title: "Bad Boys", image: "//upload.wikimedia.org/wikipedia/en/thumb/a/a8/Bad_Boys.jpg/220px-Bad_Boys.jpg", release_year: "1995", genre: "Comedy,Buddy,Action")
 
