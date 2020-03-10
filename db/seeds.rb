@@ -23,13 +23,13 @@ a7 = Actor.create(first_name: "Leonardo", last_name: "Dicaprio", image: "//uploa
 a8 = Actor.create(first_name: "Kate ", last_name: "Winslet", image: "//upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Kate_Winslet_at_the_2017_Toronto_International_Film_Festival_%28cropped%29.jpg/220px-Kate_Winslet_at_the_2017_Toronto_International_Film_Festival_%28cropped%29.jpg", biography: "Kate Elizabeth Winslet CBE is an English actress. She is particularly known for her work in period dramas, and is often drawn to portraying angst-ridden women.") 
 
 
-m1 = Movie.create(title: "Titanic", image: "https://upload.wikimedia.org/wikipedia/en/1/19/Titanic_%28Official_Film_Poster%29.png", release_year: "1997", genre: "Romance,Drama,Historical Drama")
+m1 = Movie.create(title: "Titanic", image: "https://upload.wikimedia.org/wikipedia/en/1/19/Titanic_%28Official_Film_Poster%29.png", release_year: "1997", genre: "Romance/Drama/Historical Drama")
 
-m2 = Movie.create(title: "Black Panther", image: "//upload.wikimedia.org/wikipedia/en/0/0c/Black_Panther_film_poster.jpg", release_year: "2018", genre: "Science fiction ,Action,Adventure")
+m2 = Movie.create(title: "Black Panther", image: "//upload.wikimedia.org/wikipedia/en/0/0c/Black_Panther_film_poster.jpg", release_year: "2018", genre: "Science fiction /Action /Adventure")
 
-m3 = Movie.create(title: "The Pirogue",image:"//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Affiche_207_La_pirogue_Fr.jpg/220px-Affiche_207_La_pirogue_Fr.jpg", release_year: "2012", genre: "Drama")
+m3 = Movie.create(title: "The Pirogue",image:"//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Affiche_207_La_pirogue_Fr.jpg/220px-Affiche_207_La_pirogue_Fr.jpg", release_year: "2012", genre: "Drama/International")
 
-m4 = Movie.create(title: "Bad Boys", image: "//upload.wikimedia.org/wikipedia/en/thumb/a/a8/Bad_Boys.jpg/220px-Bad_Boys.jpg", release_year: "1995", genre: "Comedy,Buddy,Action")
+m4 = Movie.create(title: "Bad Boys", image: "//upload.wikimedia.org/wikipedia/en/thumb/a/a8/Bad_Boys.jpg/220px-Bad_Boys.jpg", release_year: "1995", genre: "Comedy/Buddy/Action")
 
 
 m1.actors << [a7,a8]
