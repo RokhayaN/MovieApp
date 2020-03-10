@@ -35,8 +35,6 @@ m5 = Movie.create(title: "Alladin", image: "//upload.wikimedia.org/wikipedia/en/
 
 m6 = Movie.create(title: "Revolutionary Road", image: "//upload.wikimedia.org/wikipedia/en/3/39/Revolutionary_Road_%28Official_Film_Poster%29.png",release_year:"2008", genre:"Romantic/drama")
 
-   
-
 m1.actors << [a7,a8]
 m2.actors << [a3,a6]
 m3.actors << [a1,a2]
