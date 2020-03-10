@@ -31,9 +31,15 @@ m3 = Movie.create(title: "The Pirogue",image:"//upload.wikimedia.org/wikipedia/c
 
 m4 = Movie.create(title: "Bad Boys", image: "//upload.wikimedia.org/wikipedia/en/thumb/a/a8/Bad_Boys.jpg/220px-Bad_Boys.jpg", release_year: "1995", genre: "Comedy/Buddy/Action")
 
+m5 = Movie.create(title: "Alladin", image: "//upload.wikimedia.org/wikipedia/en/9/9a/Aladdin_%28Official_2019_Film_Poster%29.png", release_year: "2019", genre: "Musical Fantasy")
+
+m6 = Movie.create(title: "Revolutionary Road", image: "//upload.wikimedia.org/wikipedia/en/3/39/Revolutionary_Road_%28Official_Film_Poster%29.png",release_year:"2008", genre:"Romantic/drama")
+
+   
 
 m1.actors << [a7,a8]
 m2.actors << [a3,a6]
 m3.actors << [a1,a2]
 m4.actors << [a4,a5]
-
+m5.actors << [a4]
+m6.actors << [a7,a8]
