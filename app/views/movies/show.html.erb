@@ -2,30 +2,32 @@
   <div class="container">
     <div class="movie">
       
-      <!-- Display the movie's info here -->
+      
       <div class="info">
-        <!-- movie image -->
-         <%=image_tag movie.image%>
+      
+         <%=image_tag  @movie.image%>
         <h3 class="movie-title"> </h3>
-         <%=movie.title%>
+         <%=@movie.title%>
         <p class="movie-release-year"></p> 
-        <%= movie.release_year%>
+        <%=@movie.release_year%>
         <p class="movie-genre"></p>
-        <%= movie.genre%>
+        <%=@movie.genre%>
       </div>
     </div>
 
     <h2>Cast</h2>
-    <!-- Display each actor's info here -->
+    
     <% @actors.each do |actor|%>
     <div class="actor">
       <%=image_tag actor.image%>
-      <!-- actor image -->
-      <h3 class="actor-name"> </h3>
-       <%=image_tag actor.first_name +" "+ actor.last_name%>
-      <p class="actor-biography">  </p>
+      <h3 class="actor-name"> 
+       <%= actor.first_name%> <%=actor.last_name%></h3>
+      <p class="actor-biography"></p>
        <%= actor.biography%>
     </div>
 <%end%>
   </div>
-</div>
+</div> 
+
+
+
