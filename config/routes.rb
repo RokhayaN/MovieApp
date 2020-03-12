@@ -4,6 +4,17 @@ Rails.application.routes.draw do
   get '/movies/:id' => 'movies#show', as: :movie 
   get '/actors' => 'actors#index'
   get '/actors/:id' => 'actors#show', as: :actor 
+  
+  
+  
+      resources :scenes, only: [:index, :new, :create]
+
+
+  #resources :scenes, only: :create
+  
+
   get '/signup'  => 'users#new' 
   resources :users 
+
+
 end

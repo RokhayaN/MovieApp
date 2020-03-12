@@ -1,11 +1,11 @@
 class ScenesController < ApplicationController 
 
     def index
-        get_actor&scenes
-    end
+        @actor ||= Actor.find_by(id: params[:actor_id]) 
+    end 
     
       def new
-        get_actor&scenes
+        @actor ||= Actor.find_by(id: params[:actor_id])
         redirect_to actors_path if !@actor
         @scene = Scene.new
       end
@@ -22,11 +22,7 @@ class ScenesController < ApplicationController
       end
     
       private
-        def get_actor&scenes
-          @actor ||= Actor.find_by(id: params[:actor_id])
-          
-        end
-    
+       
         def scene_params
           params.require(:scene).permit(:time, :location, :movie_id, :actor_id)
         end

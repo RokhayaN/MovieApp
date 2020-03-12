@@ -1,4 +1,4 @@
-<h2> Actors <%= @actor.name %> </h2>
+<h2> Actors <%= @actor.first_name %><%= @actor.last_name %> </h2>
 <%= link_to "Add New Scene", new_actor_scene_path(@actor) %>
 
 <% @actor.scenes.each do |scene| %>
