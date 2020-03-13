@@ -3,9 +3,8 @@
     <h1>Sign up</h1>
 
 <%= form_for(@user) do |f| %>
-<p><a>First Name: <%= f.text_field :first_name, :placeholder => "First name"%></a></p>
-<a>Last Name: <%= f.text_field :last_name, :placeholder => "Last name" %></a>
-<p><a>Email: <%= f.email_field :email, :placeholder => "Email"%></a><p>
+<p><a>First Name: <%= f.text_field :username, :placeholder => "Username"%></a></p>
+<p><a>Email: <%= f.text_field :email, :placeholder => "Email"%></a><p>
 <p><a>Password: <%= f.password_field :password_digest, :placeholder => "Password" %></a><p>
 <a><%= f.submit "Create an account", class: "btn-submit" %></a></p>
-<% end %>
+<%end%>
