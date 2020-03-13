@@ -12,10 +12,10 @@ Rails.application.routes.draw do
   end 
   #resources :scenes, only: :create
   
-get '/actors/:id/scenes' => 'scenes#index'
-get '/actors/:id/scenes/new' => 'scenes#create'
-  #get '/signup'  => 'users#new' 
-  #resources :users
+  get '/actors/:id/scenes' => 'scenes#index'
+  get '/actors/:id/scenes/new' => 'scenes#new'
+  get '/signup'  => 'users#new' 
+  resources :users
 end 
 
   
