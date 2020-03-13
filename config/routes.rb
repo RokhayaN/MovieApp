@@ -5,16 +5,17 @@ Rails.application.routes.draw do
   get '/actors' => 'actors#index'
   get '/actors/:id' => 'actors#show', as: :actor 
   
+  resources :actors, only: [:index, :create, :new] do
+  resources :scenes, only: [:index, :new, :create] 
   
-  
-      resources :scenes, only: [:index, :new, :create]
-
-
+  resources :roles, only: :create
+  end 
   #resources :scenes, only: :create
   
+get '/actors/:id/scenes' => 'scenes#index'
+get '/actors/:id/scenes/new' => 'scenes#create'
+  #get '/signup'  => 'users#new' 
+  #resources :users
+end 
 
-  get '/signup'  => 'users#new' 
-  resources :users 
-
-
-end
+  
