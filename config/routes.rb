@@ -5,10 +5,9 @@ Rails.application.routes.draw do
   get '/actors' => 'actors#index'
   get '/actors/:id' => 'actors#show', as: :actor 
   
-  resources :actors, only: [:index, :create, :new] do
-  resources :scenes, only: [:index, :new, :create] 
-  
-  resources :scenes, only: :create
+  resources :actors do
+    resources :scenes
+  resources :scenes
   end 
   #resources :scenes, only: :create
   

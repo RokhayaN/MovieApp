@@ -39,6 +39,7 @@ class ScenesController < ApplicationController
         def admin_actor
           @actor ||= Actor.find_by(id: params[:actor_id])
         end 
+        
         def user_valid?
           @actor.user_id && (@actor.user.id == current_user.id)
         end
