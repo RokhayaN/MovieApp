@@ -1,4 +1,4 @@
-<h2> Adding a new scene for :</h2> 
+<h2>New scene:</h2> 
 <h3><b><%= @actor.first_name %> <%= @actor.last_name %> </h3>
 
 
@@ -8,9 +8,9 @@
   <br>
   <br>
   <div><%= f.collection_select :movie_ids, Movie.all, :id, :title, prompt: true %></div><br>
-  <%= f.label :scene%>
+  <%= f.label :scene %>
   <br>
-  <div><%= f.text_area :scene%></div> <br>
+  <div><%= f.text_area :scenes%></div> <br>
   <%= f.hidden_field :actor_id, value: @actor.id %>
   <%= f.submit "Create Scene" %>
 <% end %>
