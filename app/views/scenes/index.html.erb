@@ -1,8 +1,10 @@
 
-<%= link_to "Add New Scene", new_actor_scene_path(@actor) %>
+<%= link_to "Add a scene", new_actor_scene_path(@actor) %>
+<h1><%= @actor.first_name %><%= @actor.last_name %></h1>
 
 <% @actor.scenes.each do |scene| %>
     <h3><%= scene.movie.title %></h3>
     <p><%= scene.time %></p>
     <p><%= scene.location %></p>
+    <p><%= scene.acting %></p>
 <% end %>

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :actors, only: [:index, :create, :new] do
   resources :scenes, only: [:index, :new, :create] 
   
-  resources :roles, only: :create
+  resources :scenes, only: :create
   end 
   #resources :scenes, only: :create
   
