@@ -1,4 +1,6 @@
 class MoviesController < ApplicationController
+   before_action :require_user , except: [:index]
+
     def index 
        @movies = Movie.all
     end 
