@@ -1,11 +1,12 @@
 class ApplicationController < ActionController::Base 
+  
     def current_user
         @user = User.find_by(id: session[:user_id])
       end
     
       def require_login
         redirect_to movies_path unless logged_in?
-      end
+      end   
     
       def logged_in?
         !!current_user
@@ -15,3 +16,4 @@ class ApplicationController < ActionController::Base
         session[user_id] = user.id
       end 
 end
+

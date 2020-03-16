@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get '/actors/:id/scenes/new' => 'scenes#new'
   get '/signup'  => 'users#new' 
   resources :users
-end 
 
-  
+    get '/login' => 'sessions#new' 
+    post '/login' => 'sessions#create' 
+end 

@@ -4,8 +4,6 @@
  <%= form_for(@user) do |f| %>
  <p><a>Username: <%= f.text_field :username, :placeholder => "Username"%></a></p>
  <p><a>Email: <%= f.text_field :email, :placeholder => "Email"%></a>
-     <p>
-         <p><a>Password: <%= f.password_field :password_digest, :placeholder => "Password" %></a>
-             <p>
-                 <a><%= f.submit "Create an account", class: "btn-submit" %></a></p>
-             <%end%>
+     <p><a>Password: <%= f.password_field :password_digest, :placeholder => "Password" %></a>
+         <a><%= f.submit "Create an account", class: "btn-submit" %></a></p>
+     <%end%>
