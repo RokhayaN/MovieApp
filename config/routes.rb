@@ -14,9 +14,11 @@ Rails.application.routes.draw do
   get '/actors/:id/scenes' => 'scenes#index'
   get '/actors/:id/scenes/new' => 'scenes#new'
   get '/signup'  => 'users#new' 
+  post '/signup'=>'users#create'
   resources :users
 
     get '/login' => 'sessions#new' 
     post '/login' => 'sessions#create'
-    delete '/logout' => 'sessions#destroy' 
+    get '/logout' => 'sessions#destroy' 
+    delete'/logout'=> 'sessions#destroy' 
 end 

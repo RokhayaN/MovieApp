@@ -1,11 +1,17 @@
-<h2>Log In<h2>
+<i>
+    <h2>Log In<h2>
+</i>
 
-        <p><i><%= @error %></i></p>
+<p><i><%= @error %></i></p>
 
-        <%= form_for(:session, url: login_path) do |f| %>
-        <%= f.email_field :email, :placeholder => "Email" %>
-        <br>
-        <%= f.password_field :password, :placeholder => "Password" %>
-        <br>
-        <%= f.submit "Log in", class: "btn-submit" %>
-        <% end %>
+<%= form_for(:session, url: login_path) do |f| %>
+<i>
+    <%= label_tag :username %>
+    <%= text_field_tag :username %>
+    <br>
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+    <br>
+    <%= f.submit "Log in", class: "btn-submit" %><br>
+</i>
+<% end %>
