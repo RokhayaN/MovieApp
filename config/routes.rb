@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resources :scenes
   resources :scenes
   end 
-  #resources :scenes, only: :create
+  resources :movies
   
   get '/actors/:id/scenes' => 'scenes#index'
   get '/actors/:id/scenes/new' => 'scenes#new'
@@ -20,5 +20,5 @@ Rails.application.routes.draw do
     get '/login' => 'sessions#new' 
     post '/login' => 'sessions#create'
     get '/logout' => 'sessions#destroy' 
-    delete'/logout'=> 'sessions#destroy' 
+    
 end 

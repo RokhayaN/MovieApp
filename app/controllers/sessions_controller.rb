@@ -6,9 +6,9 @@ class SessionsController < ApplicationController
         @user = User.find_by(username: params[:username])
         if @user && @user.authenticate(params[:password])
           session[:user_id] = @user.id
-          redirect_to movies_path
+          redirect_to movies_path 
         else
-            @error = "Account not found! Please Try again"
+            @error = "Account not found! Invalid username/password! Please Try again"
             render :new
         end
     end 

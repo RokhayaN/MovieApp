@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   end
   
   def require_login
-    unless user_is_authenticated
+    unless authenticated_user
       flash[:errors] = "Please Log In to continue" 
       redirect_to controller: 'sessions', action: 'new'
     end
