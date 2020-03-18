@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+
     def new 
     end 
 
@@ -6,17 +7,18 @@ class SessionsController < ApplicationController
         @user = User.find_by(username: params[:username])
         if @user && @user.authenticate(params[:password])
           session[:user_id] = @user.id
-          redirect_to movies_path 
+          redirect_to user_path 
         else
-            @error = "Account not found! Invalid username/password! Please Try again"
-            render :new
+          flash[:errors] = "Invalid username/password. Please try again"
+                render 'new'
         end
     end 
 
     def destroy 
         
       session[:user_id] = nil
+      #session.delete
       redirect_to movies_path
-        
     end 
-end
+  end 
+

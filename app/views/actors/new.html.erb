@@ -1,8 +1,10 @@
 <h2> New Actor </h2>
 
 <%= render partial: '/errors', locals: { record: @actor} %>
-<%= image_tag @actor.image %><br><br>
 
+<% if @actor.image? %>
+<%= image_tag @actor.image_url %><br><br>
+<% end %>
 <%= form_for @actor do |f| %>
 <%= f.label :first_name %>
 <%= f.text_field :first_name %><br><br>

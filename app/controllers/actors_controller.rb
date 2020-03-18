@@ -1,5 +1,5 @@
 class ActorsController < ApplicationController
-   #before_action :require_login, except: [:index]
+   before_action :require_login, except: [:index]
     def index
        @actors = Actor.all
     end
@@ -40,7 +40,7 @@ class ActorsController < ApplicationController
     private
 
   def actor_params
-    params.require(:actor).permit(:first_name,:last_name)
+    params.require(:actor).permit(:first_name,:last_name,:biography)
   end
 end
   
