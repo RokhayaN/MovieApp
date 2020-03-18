@@ -19,18 +19,15 @@ class MoviesController < ApplicationController
     end
 
     def show 
-      params_movies
        @movie = Movie.find(params[:id])
        @actors = @movie.actors
     end
  
     def edit
-      params_movies
       @movie = Movie.find(params[:id])
     end
   
     def update
-      
       @movie = Movie.find(params[:id])
       @movie.update(movie_params)
       redirect_to movie_path(@movie)
@@ -40,8 +37,11 @@ class MoviesController < ApplicationController
       Movie.find_by(id: params[:id]).destroy
       redirect_to movies_path
     end
+    private
+
+  def movie_params
+    params.require(:movie).permit(:title, :image, :genre, :release_year)
+  end
 end
-#private 
-#def params_movies
-  # @movie = Movie.find(params[:id])
-#end 
+
+

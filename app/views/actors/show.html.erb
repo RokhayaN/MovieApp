@@ -8,6 +8,8 @@
                 <h3 class="actor-name"><%= @actor.first_name + " " + @actor.last_name  %></h3>
                 <p class="actor-bio"><%= @actor.biography%></p>
             </div>
+            <p><%= link_to "Add a New Scene", new_actor_scene_path(@actor) %></p>
+            <%= button_to "Delete Actor", actor_path(@actor), method: :delete %>
         </div>
 
         <h2>Movies</h2>

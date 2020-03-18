@@ -1,36 +1,38 @@
-<center><div class="main movie-show"><center>
-  <div class="container">
-    <div class="movie">
-      
-      
-      <div class="info">
-      
-         <%=image_tag  @movie.image%>
-        <h3 class="movie-title"></h3>
-         <b><%=@movie.title%></b>
-        <p class="movie-release-year"></p> 
-        <%=@movie.release_year%>
-        <p class="movie-genre"></p>
-        <%=@movie.genre%>
-      </div>
+<center>
+    <div class="main movie-show">
+        <center>
+            <div class="container">
+                <div class="movie">
+
+
+                    <div class="info">
+
+                        <%=image_tag  @movie.image%>
+                        <h3 class="movie-title"></h3>
+                        <b><%=@movie.title%></b>
+                        <p class="movie-release-year"></p>
+                        <%=@movie.release_year%>
+                        <p class="movie-genre"></p>
+                        <%=@movie.genre%>
+
+                        <p><%= link_to "Edit Movie", edit_movie_path %> - <%= link_to "Add a Movie", new_movie_path %>-<%= link_to "Add an Actor", new_actor_path %>
+                            <%= button_to "Delete Movie", movie_path(@movie), method: :delete %>
+
+                    </div>
+                </div>
+
+                <h2>Actors</h2>
+
+                <% @actors.each do |actor|%>
+                <div class="actor">
+                    <%=image_tag actor.image%>
+                    <h3 class="actor-name">
+                        <%= actor.first_name%> <%=actor.last_name%></h3>
+                    <p class="actor-biography"></p>
+                    <%= actor.biography%>
+                </div>
+                <br>
+                <%end%>
+            </div>
+            <br>
     </div>
-
-    <h2>Actors</h2>
-    
-    <% @actors.each do |actor|%>
-    <div class="actor">
-      <%=image_tag actor.image%>
-      <h3 class="actor-name"> 
-       <%= actor.first_name%> <%=actor.last_name%></h3>
-      <p class="actor-biography"></p>
-       <%= actor.biography%>
-       <>
-    </div>
-    <br>
-<%end%>
-  </div>
-  <br>
-</div> 
-
-
-

@@ -1,4 +1,4 @@
-<h2> New Scene <%= @scene.category %> </h2>
+<h2> Edit Scene <%= @scene.category %> </h2>
 
 <%= form_for @scene do |f| %>
 <%= f.label :Actor %>
@@ -11,5 +11,5 @@
 <div><%= f.text_field :time %></div><br>
 <%= f.label :Acting %>
 <div><%=f.text_field :acting %></div><br>
-<%= f.submit "Create a Scene" %>
+<%= f.submit "Update Scene" %>
 <% end %>
