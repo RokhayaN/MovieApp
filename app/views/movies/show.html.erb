@@ -15,7 +15,7 @@
                         <p class="movie-genre"></p>
                         <%=@movie.genre%>
 
-                        <p><%= link_to "Edit Movie", edit_movie_path %> - <%= link_to "Add a Movie", new_movie_path %>-<%= link_to "Add an Actor", new_actor_path %>
+                        <p><%= link_to "Edit Movie", edit_movie_path %> <%= link_to "Add a Movie", new_movie_path%> - <%= link_to "Add an Actor", new_actor_path %>
                             <%= button_to "Delete Movie", movie_path(@movie), method: :delete %>
 
                     </div>

@@ -1,5 +1,5 @@
 class ActorsController < ApplicationController
-   before_action :require_login, except: [:index]
+   #before_action :require_login, except: [:index]
     def index
        @actors = Actor.all
     end
@@ -25,7 +25,7 @@ class ActorsController < ApplicationController
     def edit
       @actor = Actor.find(params[:id])
       redirect_to actors_path
-    end
+    end 
   
     def update
       @actor = Actor.find(params[:id])

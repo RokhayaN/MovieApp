@@ -1,5 +1,5 @@
 class ScenesController < ApplicationController 
-  before_action :get_scene, except: [:index]
+  #before_action :get_scene, except: [:index]
 
   def index
     @scenes =Scene.all
@@ -11,7 +11,7 @@ class ScenesController < ApplicationController
 
   def create
     
-      @scene =Scene.new(role_params)
+      @scene =Scene.new(scene_params)
       if @scene.save
         render :new
     

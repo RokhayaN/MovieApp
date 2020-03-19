@@ -1,17 +1,20 @@
 <div class="main">
     <div class="container">
-        <h2>Streaming Now</h2>
-        <%@movies.each do |movie|%>
         <center>
-            <div class="movie">
+            <h2>Streaming Now</h2>
+            <center>
+                <br>
+                <%@movies.each do |movie|%>
                 <center>
-                    <%=image_tag movie.image%>
-                    <h3><%=movie.title%></h3>
-                    <p><%=movie.release_year%></p>
-                    <p><%=movie.genre%></p>
-                    <%=link_to "Learn more", movie_path(movie)%>
-            </div>
-            <br>
-            <%end%>
+                    <div class="movie">
+                        <center>
+                            <%=image_tag movie.image%>
+                            <h3><%=movie.title%></h3>
+                            <p><%=movie.release_year%></p>
+                            <p><%=movie.genre%></p>
+                            <%=link_to "Learn more", movie_path(movie)%>
+                    </div>
+                    <br>
+                    <%end%>
     </div>
 </div>
