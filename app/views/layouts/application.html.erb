@@ -12,11 +12,15 @@
 </head>
 <nav>
     <% if current_user %>
-    <li><%=current_user.username %></li>
-    <li><%= link_to "Logout", logout_path, method: "delete" %></li>
-    <% else %>
-    <%= render'layouts/nav'%>
-    <%end%>
+
+    <p>Welcome back, <%=current_user.username %>
+        </li>
+        <li><%= link_to "All Movies", movies_path, method: "get" %></li>
+        <li><%= link_to "All Actors", actors_path, method: "get" %></li>
+        <li><%= link_to "Logout", logout_path, method: "delete" %></li>
+        <% else %>
+        <%= render'layouts/nav'%>
+        <%end%>
 </nav>
 
 <body>

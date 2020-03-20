@@ -1,5 +1,5 @@
 class ScenesController < ApplicationController 
-  #before_action :get_scene, except: [:index]
+  before_action :get_scene, except: [:index]
 
   def index
     @scenes =Scene.all
