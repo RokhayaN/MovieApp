@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   #get '/actors' => 'actors#index'
   #get '/actors/:id' => 'actors#show', as: :actor 
 
-  root "welcome#home"
+  #root "welcome#home"
 
   resources :movies
   resources :actors
@@ -27,5 +27,5 @@ Rails.application.routes.draw do
     get '/login' => 'sessions#new' 
     post '/login' => 'sessions#create'
     get '/logout' => 'sessions#destroy' 
-    post '/logout' => 'sessions#destroy'
+    delete '/logout' => 'sessions#destroy'
 end 

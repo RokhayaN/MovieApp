@@ -1,5 +1,5 @@
 class Scene < ApplicationRecord
     belongs_to :movie, optional: true
     belongs_to :actor, optional: true
-    #validates_presence_of :acting, :time, :location
+   #validates_presence_of :acting, :time, :location
 end 
