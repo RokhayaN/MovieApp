@@ -6,10 +6,11 @@ Rails.application.routes.draw do
   #get '/actors' => 'actors#index'
   #get '/actors/:id' => 'actors#show', as: :actor 
 
-  #root "welcome#home"
+  root 'movies#index'
 
   resources :movies
   resources :actors
+  
   
   get '/actors/:id/scenes' => 'scenes#index'
   get '/actors/:id/scenes/new' => 'scenes#new'
@@ -19,7 +20,7 @@ Rails.application.routes.draw do
   end 
   resources :scenes
   
-  
+
   get '/signup'  => 'users#new' 
   post '/signup'=>'users#create'
   resources :users
@@ -28,5 +29,6 @@ Rails.application.routes.draw do
     post '/login' => 'sessions#create'
     get '/logout' => 'sessions#destroy' 
     delete '/logout' => 'sessions#destroy'
-    get '/auth/:provider/callback', to: 'sessions#create'
+   
+    get '/auth/:provider/callback'=> 'sessions#create'
 end 

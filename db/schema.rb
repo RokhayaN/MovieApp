@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_15_231140) do
+ActiveRecord::Schema.define(version: 2020_03_21_072314) do
 
   create_table "actors", force: :cascade do |t|
     t.string "first_name"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 2020_03_15_231140) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "email"
+    t.integer "github_uid"
   end
 
 end
