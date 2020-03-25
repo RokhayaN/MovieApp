@@ -28,5 +28,18 @@
                 </div>
                 <% end %>
 
+                <h2>Scenes</h2>
+                <% @actor.scenes.each do |scene| %>
+                <div class="scene">
+                    <%= %>
+                    <p> Location :<%=scene.location %></h3>
+                    <p> Time :<%=scene.time  %></p>
+                    <p> Acting:<%=scene.acting %></p>
+
+                </div>
+                <% end %>
+                
+
+
             </div>
     </div>

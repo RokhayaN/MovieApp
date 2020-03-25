@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
         if request.env["omniauth.auth"]
           @user = User.find_by(github_uid: request.env["omniauth.auth"]["uid"])
            if @user.nil?
-              @user = User.create(username: request.env["omniauth.auth"]["info"]["nickname"], password: "abcddfdelkjub", github_uid: request.env["omniauth.auth"]["uid"])
+              @user = User.create(username: request.env["omniauth.auth"]["info"]["nickname"], password: "jubilewko", github_uid: request.env["omniauth.auth"]["uid"])
            end
            log_in(@user)
            redirect_to movies_path
