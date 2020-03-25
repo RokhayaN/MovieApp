@@ -1,13 +1,17 @@
-<div class="main actor-index">
-    <div class="container">
-        <div class="row">
-            <% @actors.each do |actor| %>
-            <div class="actor">
-                <%= image_tag actor.image %>
-                <h3><%= actor.first_name + " " + actor.last_name %></h3>
-                <%= link_to "Learn more", actor_path(actor) %>
-            </div>
-            <% end %>
-        </div>
-    </div>
-</div>
+ <center>
+     <div class="main actor-index">
+         <center>
+             <div class="container">
+                 <div class="row">
+                     <% @actors.each do |actor| %>
+                     <div class="actor">
+                         <%= image_tag actor.image %>
+                         <h3><%= actor.first_name + " " + actor.last_name %></h3>
+                         <%= link_to "Learn more", actor_path(actor) %>
+                         <br>
+                         <br>
+                     </div>
+                     <% end %>
+                 </div>
+             </div>
+     </div>

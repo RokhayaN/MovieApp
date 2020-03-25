@@ -6,10 +6,17 @@ class SessionsController < ApplicationController
 
     def create 
       
-      if auth_hash = request.env['omniauth.auth']
-        @user = User.find_or_create_by_omniauth(auth_hash)
-        session[:user_id] = @user.id 
-         redirect_to actors_path
+      #if auth_hash = request.env['omniauth.auth']
+        #@user = User.find_or_create_by_omniauth(auth_hash)
+       # session[:user_id] = @user.id 
+        # redirect_to actors_path
+        if request.env["omniauth.auth"]
+          @user = User.find_by(github_uid: request.env["omniauth.auth"]["uid"])
+           if @user.nil?
+              @user = User.create(username: request.env["omniauth.auth"]["info"]["nickname"], password: "abcddfdelkjub", github_uid: request.env["omniauth.auth"]["uid"])
+           end
+           log_in(@user)
+           redirect_to movies_path
       else
      # binding.pry
   

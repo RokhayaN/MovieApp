@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-u1 = User.create(username:"rokhaya",email:"rokhayamuslima1@gmail.com",password:"Movie1993")
+u1 = User.create(username:"rokhaya",email:"rokhayamuslima1@gmail.com",password:"Movie1993",github_uid: "55556810")
 
 
 a1 = Actor.create(user_id: u1.id, first_name: "Julo", last_name: "Ndiaye", image: "https://cdn.senenews.com/wp-content/uploads/2017/06/julo_dakarcine-5-281x423.jpg", biography: "Souleymane Seye Ndiaye is an actor, known for Montparnasse Bienvenüe (2017), La pirogue (2012) and Des étoiles (2014)")

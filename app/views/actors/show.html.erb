@@ -1,27 +1,32 @@
-<div class="main actor-show">
-    <div class="container">
+<center>
+    <div class="main actor-show">
+        <center>
 
-        <!-- Display an actor's info here -->
-        <div class="actor">
-            <%= image_tag @actor.image %>
-            <div class="info">
-                <h3 class="actor-name"><%= @actor.first_name + " " + @actor.last_name  %></h3>
-                <p class="actor-bio"><%= @actor.biography%></p>
+            <div class="container">
+
+
+
+                <!-- Display an actor's info here -->
+                <div class="actor">
+                    <%= image_tag @actor.image %>
+                    <div class="info">
+                        <h3 class="actor-name"><%= @actor.first_name + " " + @actor.last_name  %></h3>
+                        <p class="actor-bio"><%= @actor.biography%></p>
+                    </div>
+                    <p><%= link_to "Add a New Scene", new_actor_scene_path(@actor) %></p>
+                    <%= button_to "Delete Actor", actor_path(@actor), method: :delete %>
+                </div>
+
+                <h2>Movies</h2>
+                <% @movies.each do |movie| %>
+                <div class="movie">
+                    <%= image_tag movie.image %>
+                    <h3 class="movie-title"><%= movie.title %></h3>
+                    <p class="movie-release-year"><%= movie.release_year %></p>
+                    <p class="movie-genre"><%= movie.genre %></p>
+
+                </div>
+                <% end %>
+
             </div>
-            <p><%= link_to "Add a New Scene", new_actor_scene_path(@actor) %></p>
-            <%= button_to "Delete Actor", actor_path(@actor), method: :delete %>
-        </div>
-
-        <h2>Movies</h2>
-        <% @movies.each do |movie| %>
-        <div class="movie">
-            <%= image_tag movie.image %>
-            <h3 class="movie-title"><%= movie.title %></h3>
-            <p class="movie-release-year"><%= movie.release_year %></p>
-            <p class="movie-genre"><%= movie.genre %></p>
-
-        </div>
-        <% end %>
-
     </div>
-</div>

@@ -13,7 +13,7 @@
 <nav>
     <% if current_user %>
 
-    <p>Welcome back, <%=current_user.username %>
+    <p>Welcome back,<%=current_user.username %>
         </li>
 
         <li><%= link_to "All Movies", movies_path, method: "get" %></li>
