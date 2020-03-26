@@ -15,9 +15,8 @@
                         <p class="movie-genre"></p>
                         <%=@movie.genre%>
 
-                        <p><%= link_to "Edit Movie", edit_movie_path %> - <%= link_to "Add a Movie", new_movie_path%> - <%= link_to "Add an Actor", new_actor_path %>
+                        <p><%= link_to "Edit Movie", edit_movie_path %> 
                             <%= button_to "Delete Movie", movie_path(@movie), method: :delete %>
-
                     </div>
                 </div>
 
@@ -27,7 +26,7 @@
                 <div class="actor">
                     <%=image_tag actor.image%>
                     <h3 class="actor-name">
-                        <%= actor.first_name%> <%=actor.last_name%></h3>
+                        <%= actor.first_name%><%=actor.last_name%></h3>
                     <p class="actor-biography"></p>
                     <%= actor.biography%>
                 </div>

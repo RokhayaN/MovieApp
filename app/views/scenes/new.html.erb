@@ -1,7 +1,7 @@
-<h2> New Scene <%= @scene.location %> </h2>
+<h2> New Scene <%#scene.location%> </h2>
 
 
-<%= form_for @scene do |f| %>
+<%= form_for @scene do |f|%>
 <%= f.label :Actor %>
 <div><%= f.collection_select :actor_id, Actor.all, :id, :first_name, prompt: true %></div>
 <%= f.label :Movie %>

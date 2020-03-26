@@ -14,6 +14,7 @@ class ScenesController < ApplicationController
       @scene =Scene.new(scene_params)
       if @scene.save
         render :new
+        #redirect_to actor_path
     
     end
   end
