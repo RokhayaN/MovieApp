@@ -2,8 +2,12 @@ class MoviesController < ApplicationController
    before_action :require_login , except: [:index]
 
     def index 
+      if params[:lead]
+        @movies = Movie.all.where(acting: params[:lead])
+      else
        @movies = Movie.all
     end 
+  end 
     
     def new
       @movie = Movie.new

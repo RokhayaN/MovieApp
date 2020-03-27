@@ -6,4 +6,16 @@ class Movie < ApplicationRecord
 
     scope :lead, -> { where(acting: 'Lead')}
   scope :supporting_scene, -> { where(acting: 'Supporting Scene')}
+
+   def self.lead
+     self.where(acting: "Lead")
+   end
+
+   def self.actor
+     where("actor > 0")
+   end
+
+   def self.supporting_scene
+     self.where(acting: "Supporting Role")
+   end
 end 
