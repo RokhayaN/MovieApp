@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
     def new
         @user = User.new
+        #@scene.actor
     end 
 
     def create 

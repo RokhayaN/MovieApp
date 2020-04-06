@@ -2,7 +2,9 @@ class ScenesController < ApplicationController
   before_action :get_scene, except: [:index]
 
   def index
-    @scenes =Scene.all
+    
+    @scenes =Scene.all 
+    #Scene.supporting_scene
   end
 
   def new
@@ -13,10 +15,11 @@ class ScenesController < ApplicationController
     
       @scene =Scene.new(scene_params)
       if @scene.save
+        #render :new
+        redirect_to actors_path
+      else 
         render :new
-        #redirect_to actor_path
-    
-    end
+      end
   end
 
   def edit

@@ -2,15 +2,17 @@ class MoviesController < ApplicationController
    before_action :require_login , except: [:index]
 
     def index 
-      if params[:lead]
-        @movies = Movie.all.where(acting: params[:lead])
-      else
-       @movies = Movie.all
+
+        if params[:filter]
+          @movies = Movie.all.where(title: params[:filter])
+        else
+          @movies = Movie.all
+        end 
     end 
-  end 
+   
     
     def new
-      @movie = Movie.new
+     @movie = Movie.new
     end 
 
     def create
@@ -23,6 +25,7 @@ class MoviesController < ApplicationController
     end
 
     def show 
+      #byebug
        @movie = Movie.find(params[:id])
        @actors = @movie.actors
     end
@@ -40,12 +43,13 @@ class MoviesController < ApplicationController
     def destroy
       Movie.find_by(id: params[:id]).destroy
       redirect_to movies_path
-    end
+    end 
+
     private
 
   def movie_params
     params.require(:movie).permit(:title, :image, :genre, :release_year)
   end
-end
+end 
 
 
